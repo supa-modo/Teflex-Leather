@@ -44,7 +44,7 @@ const BrandsSection = () => {
             Brands
           </h2>
           <div className="w-24 h-[2px] bg-leather-default/60 mx-auto mb-4"></div>
-          <p className="text-espresso/80 text-[0.97rem] md:text-lg font-light leading-relaxed max-w-4xl mx-auto">
+          <p className="text-charcoal/70 text-[0.9rem] md:text-lg font-sans font-medium leading-relaxed max-w-4xl mx-auto">
             Discover our collection of premium leather brands, each with its own
             unique heritage and character, meticulously crafted with exceptional
             attention to detail and quality for discerning professionals and
@@ -131,7 +131,7 @@ const BrandsSection = () => {
                   Brands
                 </h3>
                 <div className="w-24 h-[2px] bg-leather-light/60 mx-auto mb-6"></div>
-                <p className="text-cream/80 text-[0.93rem] md:text-lg font-light leading-relaxed max-w-4xl mx-auto">
+                <p className="text-cream/80 text-[0.93rem] md:text-lg font-sans leading-relaxed max-w-4xl mx-auto">
                   Our leather goods are sought after by professionals who demand
                   both functionality and sophistication, trusted by official
                   personnel, security officers, military personnel, and business
@@ -165,7 +165,7 @@ const BrandsSection = () => {
                       </h4>
                     </div>
                     <div className="w-12 h-[2px] bg-leather-light/40 rounded-full mx-auto mb-4"></div>
-                    <p className="text-cream/90 font-light leading-relaxed text-center">
+                    <p className="text-cream/80 font-light font-sans text-[0.93rem] md:text-base leading-relaxed text-center">
                       {feature.description}
                     </p>
                   </motion.div>
@@ -207,7 +207,7 @@ const BrandCard = ({ brand, isHovered }) => {
         </div>
       </div>
       <div className="p-5 md:p-7 bg-white">
-        <p className="text-espresso/80 font-light leading-relaxed mb-6 line-clamp-3 text-base">
+        <p className="text-[0.95rem] md:text-base text-charcoal/70 font-sans font-medium leading-relaxed mb-6 line-clamp-4">
           {description}
         </p>
         <Link
