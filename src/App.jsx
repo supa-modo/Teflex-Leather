@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"
 
 // Layouts
 import MainLayout from "./layouts/MainLayout";
@@ -15,8 +16,10 @@ import ScrollToTop from "./utils/ScrollToTop";
 function App() {
   return (
     <Router>
+      <Analytics/>
       <ScrollToTop />
       <Routes>
+        
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
