@@ -69,11 +69,11 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-3 md:px-4 relative z-20 text-white max-w-screen flex flex-col min-h-[calc(100vh-80px)]">
+      <div className="container mx-auto px-3 md:px-4 relative z-20 text-white max-w-screen flex flex-col min-h-[100vh">
         <div className="flex flex-col lg:flex-row gap-8 items-start flex-grow py-16 md:py-20">
           {/* Left Content Column */}
           <div className="text-shadow-lg lg:w-[50%] mt-14 lg:mt-16 pl-0 md:pl-16 flex flex-col">
-            <div className="pt-12 md:pt-16">
+            <div className="pt-12 md:pt-16 pb-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ const Hero = () => {
                 <motion.button
                   whileTap={{ scale: 0.95 }}
                   onClick={() => navigate("/brands")}
-                  className="w-full md:w-auto group bg-leather-default text-white hover:bg-leather-dark px-8 py-4 transition-all duration-300 font-medium tracking-wider text-[0.83rem] md:text-sm uppercase flex items-center justify-center min-w-[200px] shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
+                  className="w-full md:w-auto group bg-leather-default text-white hover:bg-leather-dark px-8 py-4 transition-all duration-300 font-medium tracking-wider text-xs md:text-sm uppercase flex items-center justify-center min-w-[200px] shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
                 >
                   <span className="relative inline-flex items-center z-10">
                     Explore Collection
@@ -145,7 +145,7 @@ const Hero = () => {
                 <motion.button
                   whileTap={{ scale: 0.95 }}
                   onClick={() => navigate("/about")}
-                  className="w-full md:w-auto group text-white hover:bg-cream/10 border-2 border-cream hover:backdrop-blur-sm hover:border-primary-500 px-8 py-4 transition-all duration-300 font-medium tracking-wider text-[0.83rem] md:text-sm uppercase flex items-center justify-center min-w-[200px] shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
+                  className="w-full md:w-auto group text-white hover:bg-cream/10 border-2 border-cream hover:backdrop-blur-sm hover:border-primary-500 px-8 py-4 transition-all duration-300 font-medium tracking-wider text-xs md:text-sm uppercase flex items-center justify-center min-w-[200px] shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
                 >
                   <span className="relative inline-flex items-center z-10">
                     Learn More
@@ -359,7 +359,7 @@ const Hero = () => {
 
       {/* Stylish Stats Section - Positioned at the bottom */}
       <motion.div
-        className="absolute bottom-16 md:bottom-20 left-0 z-20 w-full px-4"
+        className="absolute bottom-3 md:bottom-20 left-0 z-20 w-full px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
@@ -418,7 +418,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-2 md:bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center"
+        className="hidden lg:flex absolute bottom-2 md:bottom-6 left-1/2 transform -translate-x-1/2 z-20 items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}

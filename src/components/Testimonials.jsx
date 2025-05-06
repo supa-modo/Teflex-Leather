@@ -146,7 +146,7 @@ const Testimonials = () => {
           </div>
 
           {/* Carousel navigation */}
-          <div className="flex justify-between items-center mt-12 max-w-lg mx-auto">
+          <div className="flex justify-between items-center px-4 mt-12 max-w-lg mx-auto">
             <button
               onClick={handlePrev}
               disabled={isAnimating}

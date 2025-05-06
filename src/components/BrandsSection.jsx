@@ -80,7 +80,7 @@ const BrandsSection = () => {
           >
             <Link
               to="/brands"
-              className="group bg-leather-light text-espresso-dark hover:bg-cream px-8 py-4 transition-all duration-300 font-medium tracking-wide text-[0.8rem] md:text-sm uppercase flex items-center justify-center mx-auto max-w-xs shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
+              className="group bg-leather-light text-espresso-dark hover:bg-cream px-8 py-4 transition-all duration-300 font-medium tracking-wide text-xs md:text-sm uppercase flex items-center justify-center mx-auto max-w-xs shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center">
                 Explore All Collections{" "}

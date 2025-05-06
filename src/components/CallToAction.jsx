@@ -31,7 +31,7 @@ const CallToAction = () => {
                 >
                   <span className="inline-block text-leather-light font-display italic font-medium  text-xl mb-4">Artisanal Excellence Since 2010</span>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
-                    Experience the <span className="text-leather-light italic">Timeless Elegance</span> of East African Leather
+                    Experience the <span className="text-leather-light italic">Timeless Elegance</span> of East African Leather 
                   </h2>
                   <div className="w-24 h-[2px] bg-leather-light/60 mx-auto lg:mx-0 mb-6"></div>
                   <p className="text-cream/90 text-[0.95rem] md:text-lg font-light font-sans leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
@@ -41,14 +41,14 @@ const CallToAction = () => {
                   <div className="flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
                     <Link 
                       to="/collections" 
-                      className="group bg-leather-light text-espresso-dark hover:bg-cream px-8 py-4 transition-all duration-300 font-semibold md:font-medium  tracking-wider text-xs md:text-sm uppercase flex items-center justify-center min-w-[200px] shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
+                      className="group bg-leather-light text-espresso-dark hover:bg-cream px-8 py-4 transition-all duration-300 font-semibold md:font-medium  tracking-wide text-xs md:text-sm uppercase flex items-center justify-center min-w-[200px] shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
                     >
                       <span className="relative z-10">Explore Collection</span>
                       <span className="absolute inset-0 bg-cream transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
                     </Link>
                     <Link 
                       to="/bespoke" 
-                      className="group border border-leather-light/60 text-leather-light hover:text-cream px-8 py-4 transition-all duration-300 font-semibold md:font-medium tracking-wider text-xs md:text-sm uppercase flex items-center justify-center min-w-[200px] relative overflow-hidden"
+                      className="group border border-leather-light/60 text-leather-light hover:text-cream px-8 py-4 transition-all duration-300 font-semibold md:font-medium tracking-wide text-xs md:text-sm uppercase flex items-center justify-center min-w-[200px] relative overflow-hidden"
                     >
                       <span className="relative z-10 flex items-center">Bespoke Services <TbArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" /></span>
                       <span className="absolute inset-0 bg-leather-dark transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
