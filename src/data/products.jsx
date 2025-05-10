@@ -1,13 +1,13 @@
 // Brand data collection
 export const brands = {
-  kingsman: {
-    id: "kingsman",
-    name: "KINGSMAN",
+  theboy: {
+    id: "theboy",
+    name: "TheBOY",
     tagline: "Elegance in every detail",
-    description: "Our premium line of executive leather goods, crafted for the distinguished gentleman. The Kingsman collection embodies sophistication, precision, and timeless style.",
-    longDescription: "Inspired by the refined aesthetics of bespoke British tailoring, the Kingsman collection represents the pinnacle of our craftsmanship. Each piece is meticulously handcrafted using the finest full-grain leather, featuring elegant brass hardware and our signature hand-stitched details. The collection is designed for the modern professional who demands both impeccable style and practical functionality.",
+    description: "Our premium line of executive leather goods, crafted for the distinguished gentleman. TheBoy collection embodies sophistication, precision, and timeless style.",
+    longDescription: "Inspired by the refined aesthetics of bespoke British tailoring, the TheBoy collection represents the pinnacle of our craftsmanship. Each piece is meticulously handcrafted using the finest full-grain leather, featuring elegant brass hardware and our signature hand-stitched details. The collection is designed for the modern professional who demands both impeccable style and practical functionality.",
     heroImage: "/shoe-01.jpg",
-    accentColor: "bg-leather-dark"
+    accentColor: "bg-neutral-800"
   },
   nachuchi: {
     id: "nachuchi",
@@ -16,7 +16,7 @@ export const brands = {
     description: "A fusion of traditional East African artistry and contemporary design. NaChuchi celebrates our heritage with modern sensibilities.",
     longDescription: "NaChuchi, meaning 'of our heritage' in Swahili, is our tribute to East African craftsmanship. This collection combines traditional techniques with contemporary design elements, creating pieces that are both culturally rich and modern in appeal. We use locally sourced leather with natural variations in texture and color, celebrating the authentic character of each hide. The collection features distinctive patterns inspired by East African art and architecture.",
     heroImage: "/shoe-8.jpg",
-    accentColor: "bg-leather-light"
+    accentColor: "bg-accent-dark"
   },
   savanna: {
     id: "savanna",
@@ -25,7 +25,7 @@ export const brands = {
     description: "Durable, weather-resistant leather goods designed for the modern explorer. Savanna combines functionality with sophisticated safari-inspired aesthetics.",
     longDescription: "The Savanna collection draws inspiration from the untamed beauty of the East African landscape. Crafted from rugged, oil-tanned leather that develops a rich patina over time, these pieces are designed to withstand the elements while maintaining their elegant appeal. Each item features reinforced stitching, weather-resistant treatments, and practical design elements that cater to both urban professionals and outdoor enthusiasts.",
     heroImage: "/shoe-2.jpg",
-    accentColor: "bg-accent-default"
+    accentColor: "bg-leather-dark"
   },
   karavan: {
     id: "karavan",
@@ -33,8 +33,17 @@ export const brands = {
     tagline: "Affordability and style",
     description: "Our accessible line of quality leather goods, offering the perfect balance of affordability and craftsmanship for everyday use.",
     longDescription: "The Karavan collection makes our quality leather goods accessible to a wider audience without compromising on craftsmanship. Using carefully selected leather and efficient production techniques, we've created a line that offers excellent value while maintaining our commitment to quality. These pieces feature clean, contemporary designs with simplified construction, making them perfect for everyday use.",
-    heroImage: "/bag-2.jpg",
-    accentColor: "bg-primary-500"
+    heroImage: "/shoe-9.jpg",
+    accentColor: "bg-charcoal/95"
+  },
+  noella: {
+    id: "noella",
+    name: "NOELLA",
+    tagline: "Good doesn't have to be out of your reach",
+    description: "Leather goods and accessories such as bags, pouches, straps etc., crafted from high-quality genuine leather.",
+    longDescription: "The products in this range are designed and produced on order. Each Noella piece is a testament to our commitment to quality and craftsmanship, offering luxury that is accessible without compromising on excellence.",
+    heroImage: "/shoe-6.jpg",
+    accentColor: "bg-espresso"
   }
 };
 
@@ -47,7 +56,7 @@ export const products = [
       price: 249.99,
       imageUrl: "/shoe-01.jpg",
       category: "Footwear",
-      brand: "Kingsman",
+      brand: "TheBoy",
       featured: true,
       details: {
         material: "Full-grain leather",
@@ -61,9 +70,9 @@ export const products = [
       name: "Classic Leather Briefcase",
       description: "Elegant leather briefcase with multiple compartments for the modern professional.",
       price: 329.99,
-      imageUrl: "/bag-1.jpg",
+      imageUrl: "/accs-2.jpg",
       category: "Bags",
-      brand: "Kingsman",
+      brand: "TheBoy",
       featured: true,
       details: {
         material: "Premium cowhide leather",
@@ -77,9 +86,9 @@ export const products = [
       name: "Handcrafted Belt",
       description: "Meticulously crafted leather belt with a timeless design.",
       price: 89.99,
-      imageUrl: "/belt-1.jpg",
+      imageUrl: "/shoe-1.jpg",
       category: "Accessories",
-      brand: "Kingsman",
+      brand: "TheBoy",
       featured: false,
       details: {
         material: "Full-grain leather",
@@ -109,7 +118,7 @@ export const products = [
       name: "Slim Leather Wallet",
       description: "Minimalist wallet with RFID protection and premium leather construction.",
       price: 69.99,
-      imageUrl: "/wallet-1.jpg",
+      imageUrl: "/accs-1.jpg",
       category: "Accessories",
       brand: "NaChuchi",
       featured: false,
@@ -125,7 +134,7 @@ export const products = [
       name: "Leather Messenger Bag",
       description: "Versatile messenger bag with adjustable strap and multiple pockets.",
       price: 199.99,
-      imageUrl: "/bag-2.jpg",
+      imageUrl: "/accs-2.jpg",
       category: "Bags",
       brand: "Karavan",
       featured: true,
@@ -157,9 +166,9 @@ export const products = [
       name: "Leather Travel Duffel",
       description: "Spacious duffel bag perfect for weekend getaways or business trips.",
       price: 349.99,
-      imageUrl: "/bag-3.jpg",
+      imageUrl: "/shoe-3.jpg",
       category: "Bags",
-      brand: "Savanna",
+      brand: "Noella",
       featured: true,
       details: {
         material: "Buffalo leather",
@@ -175,7 +184,7 @@ export const products = [
       price: 229.99,
       imageUrl: "/shoe-9.jpg",
       category: "Footwear",
-      brand: "Kingsman",
+      brand: "TheBoy",
       featured: false,
       details: {
         material: "Full-grain leather",
@@ -189,7 +198,7 @@ export const products = [
       name: "Leather Card Holder",
       description: "Slim and elegant card holder for essential cards.",
       price: 49.99,
-      imageUrl: "/wallet-2.jpg",
+      imageUrl: "/accs-1.jpg",
       category: "Accessories",
       brand: "Karavan",
       featured: false,
@@ -221,9 +230,9 @@ export const products = [
       name: "Executive Leather Backpack",
       description: "Sophisticated backpack designed for the modern professional.",
       price: 289.99,
-      imageUrl: "/bag-4.jpg",
+      imageUrl: "/shoe-4.jpg",
       category: "Bags",
-      brand: "Kingsman",
+      brand: "Noella",
       featured: true,
       details: {
         material: "Premium cowhide leather",

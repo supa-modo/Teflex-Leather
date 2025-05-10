@@ -8,9 +8,9 @@ import {
   FaHandHolding,
   FaGlobeAfrica,
 } from "react-icons/fa";
+import ContactCallToAction from "../components/ContactCallToAction";
 
 const BrandsPage = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -71,12 +71,12 @@ const BrandsPage = () => {
       </section>
 
       {/* Why Choose Our Brands Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-espresso to-accent-light text-white relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-gradient-to-b from-espresso/80 to-charcoal text-white relative overflow-hidden">
         {/* Background texture */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay">
+        <div className="absolute inset-0 opacity-[2%] pointer-events-none mix-blend-overlay">
           <div
             className="absolute top-0 left-0 w-full h-full bg-repeat"
-            style={{ backgroundImage: "url('/leather-texture.png')" }}
+            style={{ backgroundImage: "url('/leather-icon.png')" }}
           ></div>
         </div>
 
@@ -88,7 +88,7 @@ const BrandsPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="text-center mb-8 md:mb-14">
+            <div className="text-left mb-8 md:mb-14">
               <span className="inline-block text-leather-light font-serif italic text-lg mb-4">
                 Artisanal Excellence
               </span>
@@ -99,8 +99,8 @@ const BrandsPage = () => {
                 </span>{" "}
                 Brands
               </h3>
-              <div className="w-24 h-[2px] bg-leather-light/60 mx-auto mb-6"></div>
-              <p className="text-cream/80 text-[0.93rem] md:text-lg font-light leading-relaxed max-w-4xl mx-auto">
+              <div className="w-24 h-[2px] bg-leather-light/60 mb-6"></div>
+              <p className="text-cream/80 text-[0.93rem] md:text-lg font-light leading-relaxed max-w-4xl">
                 Our leather goods are sought after by professionals who demand
                 both functionality and sophistication, trusted by official
                 personnel, security officers, military personnel, and business
@@ -144,12 +144,14 @@ const BrandsPage = () => {
         </div>
       </section>
 
-      <CallToAction />
+      {/* Contact Call To Action */}
+      <ContactCallToAction />
     </div>
   );
 };
 
 const BrandSection = ({ brand, reverse }) => {
+  const navigate = useNavigate();
   const {
     id,
     name,
@@ -237,29 +239,6 @@ const BrandSection = ({ brand, reverse }) => {
             </div>
           </motion.div>
         </motion.div>
-
-        {/* <motion.div 
-          className="mt-20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <div className="flex justify-between items-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-display font-bold text-charcoal">Featured {name} Products</h3>
-            <Link 
-              to={`/brands/${id}`}
-              className="text-leather-default hover:text-leather-dark transition-colors duration-300 flex items-center gap-2 font-medium"
-            >
-              View All <TbArrowRight />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.slice(0, 4).map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </motion.div> */}
       </div>
     </div>
   );
@@ -328,8 +307,46 @@ const brandFeatures = [
 // Sample data
 const brands = [
   {
+    id: "theboy",
+    name: "TheBOY",
+    link: "/brands/theboy",
+    tagline: "Bring out the boy in every male",
+    description:
+      "Bespoke Leather Products uniquely designed with the boy in mind.",
+    longDescription:
+      "Our wallets, belts, loafers and custom men's shoes bring out the boy in every male. TheBOY collection combines playful sophistication with masculine elegance, creating leather goods that make a statement.",
+    imageUrl: "shoe-2.jpg",
+    products: [
+      {
+        id: 401,
+        name: "Leather Wallet",
+        price: 49.99,
+        imageUrl: "shoe-3.jpg",
+      },
+      {
+        id: 402,
+        name: "Leather Belt",
+        price: 39.99,
+        imageUrl: "shoe-4.jpg",
+      },
+      {
+        id: 403,
+        name: "Leather Loafers",
+        price: 119.99,
+        imageUrl: "shoe-5.jpg",
+      },
+      {
+        id: 404,
+        name: "Leather Card Holder",
+        price: 29.99,
+        imageUrl: "shoe-1.jpg",
+      },
+    ],
+  },
+  {
     id: "karavan",
     name: "KARAVAN",
+    link: "/brands/karavan",
     tagline: "Affordability and style",
     description:
       "Leather shoes designs that meet the robust application while maintaining elegance and style.",
@@ -366,6 +383,7 @@ const brands = [
   {
     id: "noella",
     name: "NOELLA",
+    link: "/brands/noella",
     tagline: "Good doesn't have to be out of your reach",
     description:
       "Leather goods and accessories such as bags, pouches, straps etc., crafted from high-quality genuine leather.",
@@ -402,6 +420,7 @@ const brands = [
   {
     id: "nachuchi",
     name: "NaCHUCHI",
+    link: "/brands/nachuchi",
     tagline: "Bring out the sweetness in comfort",
     description:
       "Robust and durable products with a greater focus on functionality.",
@@ -435,42 +454,7 @@ const brands = [
       },
     ],
   },
-  {
-    id: "theboy",
-    name: "TheBOY",
-    tagline: "Bring out the boy in every male",
-    description:
-      "Bespoke Leather Products uniquely designed with the boy in mind.",
-    longDescription:
-      "Our wallets, belts, loafers and custom men's shoes bring out the boy in every male. TheBOY collection combines playful sophistication with masculine elegance, creating leather goods that make a statement.",
-    imageUrl: "shoe-2.jpg",
-    products: [
-      {
-        id: 401,
-        name: "Leather Wallet",
-        price: 49.99,
-        imageUrl: "shoe-3.jpg",
-      },
-      {
-        id: 402,
-        name: "Leather Belt",
-        price: 39.99,
-        imageUrl: "shoe-4.jpg",
-      },
-      {
-        id: 403,
-        name: "Leather Loafers",
-        price: 119.99,
-        imageUrl: "shoe-5.jpg",
-      },
-      {
-        id: 404,
-        name: "Leather Card Holder",
-        price: 29.99,
-        imageUrl: "shoe-1.jpg",
-      },
-    ],
-  },
+  
 ];
 
 export default BrandsPage;

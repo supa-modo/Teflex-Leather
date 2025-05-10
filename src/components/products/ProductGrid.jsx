@@ -9,7 +9,7 @@ const ProductGrid = ({ products, onViewBrandCollection }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      {products.length < 0 ? (
+      {products.length > 0 ? (
         products.map((product) => (
           <ProductCard
             key={product.id}
@@ -33,7 +33,7 @@ const ProductCard = ({ product, onViewBrandCollection }) => {
 
   return (
     <motion.div
-      className="group bg-white border border-gray-100 shadow-elegant hover:shadow-premium transition-all duration-300 overflow-hidden relative"
+      className="group bg-white border border-espresso/20 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative"
       variants={{
         hidden: { opacity: 0, y: 20 },
         visible: {

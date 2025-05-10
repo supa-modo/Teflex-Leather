@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 
 const BrandTabs = ({ activeTab, onTabClick }) => {
   return (
-    <section className="py-8 bg-cream/50 border-b border-leather-light/10 sticky top-16 z-20 backdrop-blur-sm">
-      <div className="container mx-auto px-4">
+    <section className="py-4 bg-cream/50 border-b border-leather-light/10 sticky top-16 z-20 backdrop-blur-sm">
+      <div className="container mx-auto px-1 md:px-2">
         <div className="flex overflow-x-auto hide-scrollbar space-x-1 md:space-x-4 justify-center">
           <TabButton 
             label="All Collections" 
@@ -26,9 +26,9 @@ const BrandTabs = ({ activeTab, onTabClick }) => {
             onClick={() => onTabClick('savanna')} 
           />
           <TabButton 
-            label="Kingsman" 
-            active={activeTab === 'kingsman'} 
-            onClick={() => onTabClick('kingsman')} 
+            label="TheBoy" 
+            active={activeTab === 'theboy'} 
+            onClick={() => onTabClick('theboy')} 
           />
         </div>
       </div>
@@ -39,7 +39,7 @@ const BrandTabs = ({ activeTab, onTabClick }) => {
 const TabButton = ({ label, active, onClick }) => {
   return (
     <motion.button
-      className={`whitespace-nowrap px-4 py-3 font-medium text-sm transition-colors duration-300 relative ${
+      className={`whitespace-nowrap px-4 py-2.5 font-semibold font-sans text-[0.8rem] md:text-sm transition-colors duration-300 relative ${
         active 
           ? 'text-leather-dark' 
           : 'text-charcoal/70 hover:text-leather-default'

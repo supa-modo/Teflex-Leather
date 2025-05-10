@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { TbArrowRight } from "react-icons/tb";
 import CallToAction from "../components/CallToAction";
 import { useNavigate } from "react-router-dom";
+import ContactCallToAction from "../components/ContactCallToAction";
 
 const AboutPage = () => {
   const navigate = useNavigate();
@@ -370,7 +371,8 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <CallToAction />
+      {/* Contact Call To Action */}
+      <ContactCallToAction />
     </div>
   );
 };

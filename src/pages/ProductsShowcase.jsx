@@ -8,8 +8,7 @@ import { products as allProducts, brands } from "../data/products";
 import ProductsHero from '../components/products/ProductsHero';
 import BrandTabs from '../components/products/BrandTabs';
 import ProductGrid from '../components/products/ProductGrid';
-import ProductFeatures from '../components/products/ProductFeatures';
-import CallToAction from '../components/CallToAction';
+import ProductFeatures from "../components/products/ProductFeatures";
 import ContactCallToAction from '../components/ContactCallToAction';
 
 const ProductsShowcase = () => {
@@ -42,8 +41,7 @@ const ProductsShowcase = () => {
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
     if (tabName !== 'all') {
-      // Capitalize first letter of brand name (e.g., 'nachuchi' -> 'Nachuchi')
-      setSelectedBrand(tabName.charAt(0).toUpperCase() + tabName.slice(1));
+      setSelectedBrand(tabName.charAt(0).lowercase() + tabName.slice(1));
     } else {
       setSelectedBrand('All');
     }
@@ -176,9 +174,8 @@ const ProductsShowcase = () => {
               <motion.div 
                 className="bg-white rounded-sm shadow-elegant border border-gray-100 p-6 sticky top-32"
                 initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
               >
                 {/* Search */}
                 <div className="relative mb-8">
@@ -243,7 +240,7 @@ const ProductsShowcase = () => {
             <div className="w-full lg:w-3/4">
               {/* Collection Title */}
               <motion.div
-                className="mb-8"
+                className="mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -256,7 +253,7 @@ const ProductsShowcase = () => {
                 </h2>
                 <div className="w-16 h-[2px] bg-leather-default/60 mb-4"></div>
                 <p className="text-charcoal/70">
-                  {filteredProducts.length} {filteredProducts.length === 1 ? 'product' : 'products'} found
+                  {filteredProducts.length} {filteredProducts.length === 1 ? 'product' : 'products'} available
                 </p>
               </motion.div>
 
@@ -270,9 +267,6 @@ const ProductsShowcase = () => {
           </div>
         </div>
       </section>
-
-      {/* Product Features Showcase */}
-      <ProductFeatures />
       
       {/* Contact Call To Action */}
       <ContactCallToAction />
