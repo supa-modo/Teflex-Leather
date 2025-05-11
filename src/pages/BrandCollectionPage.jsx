@@ -131,7 +131,7 @@ const BrandCollectionPage = () => {
               <img
                 src={brandData.heroImage}
                 alt={brandData.name}
-                className="w-full h-[400px] object-cover rounded-sm shadow-premium"
+                className="w-full h-[300px] md:h-[450px] object-cover rounded-sm shadow-premium"
               />
 
               {/* Decorative elements */}

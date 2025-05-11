@@ -196,7 +196,7 @@ const BrandSection = ({ brand, reverse }) => {
             <motion.button
               whileTap={{ scale: 0.97 }}
               onClick={() => navigate(`/brands/${id}`)}
-              className="group bg-leather-default text-white hover:bg-leather-dark px-8 py-4 transition-all duration-300 font-medium tracking-wider text-sm uppercase flex items-center justify-center min-w-[200px] shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
+              className="group bg-leather-default text-white hover:bg-leather-dark px-8 py-4 transition-all duration-300 font-medium tracking-wider text-xs md:text-sm uppercase flex items-center justify-center min-w-[200px] shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] relative overflow-hidden"
             >
               <span className="relative inline-flex items-center z-10">
                 Explore {name} Collection
